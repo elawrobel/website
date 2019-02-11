@@ -1,0 +1,44 @@
+.section__title {
+  font: 1.5rem $font;
+  color: $dark-purple;
+  text-align: center;
+}
+
+.section__title--big {
+  color: $dark-purple;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  position: absolute;
+  right: 0;
+  background-color: $v-light-grey;
+  top: 50%;
+
+  @include breakpoint(lg) {
+    font-size: 2.5rem;
+    background-color: transparent;
+    padding: 1rem 2rem;
+  }
+
+  @include breakpoint(xl) {
+    font-size: 3.5rem;
+    background-color: transparent;
+    padding: 1rem 2rem;
+  }
+}
+
+.section__title--motto {
+  font: 2.5rem $font;
+  color: $dark-purple;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  background: rgba(245, 245, 245, 0.57);
+  padding: 0 40px 0 20px;
+
+  @include breakpoint(lg) {
+    top: 50%;
+    font: 3.5rem $font;
+    padding: 0 50px;
+  }
+}

@@ -1,0 +1,126 @@
+// header
+.header__nav {
+  background-color: $white;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: $white;
+
+    li a {
+      display: block;
+      padding: 20px 20px;
+      text-decoration: none;
+      color: $dark-purple;
+      font-weight: bold;
+
+      &:hover,
+      &:focus {
+        color: $dark-purple;
+      }
+    }
+  }
+}
+
+//menu
+.header__nav .header__nav_menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header__nav .header__nav_menu--icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+
+  .navicon {
+    background: $dark-purple;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+
+    &:before,
+    &:after {
+      background: $dark-purple;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+    }
+
+    &:before {
+      top: 5px;
+    }
+
+    &:after {
+      top: -5px;
+    }
+  }
+}
+
+/* menu btn */
+
+.header__nav .header__nav_menu--btn {
+  display: none;
+}
+
+.header__nav .header__nav_menu--btn:checked ~ .header__nav_menu {
+  max-height: 400px;
+}
+
+.header__nav .header__nav_menu--btn:checked ~ .header__nav_menu--icon .navicon {
+  background: transparent;
+}
+
+.header__nav .header__nav_menu--btn:checked ~ .header__nav_menu--icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header__nav .header__nav_menu--btn:checked ~ .header__nav_menu--icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header__nav .header__nav_menu--btn:checked ~ .header__nav_menu--icon:not(.steps) .navicon:before,
+.header__nav .header__nav_menu--btn:checked ~ .header__nav_menu--icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+@include breakpoint(md) {
+  .header__nav li {
+    float: left;
+  }
+  .header__nav li a {
+    padding: 20px 30px;
+  }
+  .header__nav .header__nav_menu {
+    clear: none;
+    max-height: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__nav .header__nav_menu--icon {
+    display: none;
+  }
+}
+
+@include breakpoint(exmd){
+  .header__nav li a {
+    padding: 20px 5px !important;
+    font-size: 12px;
+  }
+}

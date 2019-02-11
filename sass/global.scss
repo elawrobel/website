@@ -1,0 +1,96 @@
+// - bootstrap only -
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+// reset
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 1px dotted;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $dark-blue;
+  transition: $transition;
+  word-wrap: break-word;
+
+  svg polyline,
+  svg path {
+    stroke: $dark-blue;
+    transition: $transition;
+  }
+
+  &:hover,
+  &:focus {
+    svg polyline,
+    svg path {
+      stroke: $white;
+      fill: $dark-blue;
+    }
+    svg .border_svg {
+      stroke: $dark-blue;
+    }
+  }
+}
+
+img,
+svg {
+  max-width: calc(100% + .1px);
+}
+
+
+// --- general ---
+
+body {
+  min-width: 320px;
+  font: 1rem/1.56 $font;
+  color: $dark-purple;
+  overflow-x:hidden;
+  background: $white;
+}
+
+.nooverflow {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+b, strong{
+  font-weight: bold;
+  font-family: $font;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-blue;
+
+  &:hover,
+  &:focus {
+    color: $dark-purple;
+  }
+}

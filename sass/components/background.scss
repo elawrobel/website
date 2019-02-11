@@ -1,0 +1,31 @@
+.section__hover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 10px 10px 0 0 rgba(43,10,61,.2);
+}
+
+#healthy .section__hover {
+  background-image: url(../images/cover_1.jpg);
+}
+
+#experience .section__hover {
+  background-image: url(../images/cover_6.jpg);
+}
+
+#weight .section__hover{
+  background-image: url(../images/cover_4.jpg);
+}
+
+#muscle .section__hover{
+  background-image: url(../images/cover_3.jpg);
+}
+
+#alert .section__hover{
+  background-image: url(../images/cover_7.jpg);
+}
+
+#mailing .section__hover{
+  background-image: url(../images/cover_5.jpg);
+  background-position: bottom;
+}
